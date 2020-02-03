@@ -1,0 +1,128 @@
+@import "../Variables.scss";
+
+.banner {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 70px;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.322);
+  color: $color-white;
+  text-align: center;
+  text-transform: capitalize;
+  align-items: center;
+  @include respond-to('s') {
+    padding: 2rem 3rem;
+  }
+  @include respond-to('m') {
+    padding: 2rem 6rem;
+  }
+  h1 {
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    @include respond-to('s') {
+      font-size: 30px;
+    }
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+.bannerHomeTop {
+  width: 100%;
+  max-width: 1440px;
+  height: 50vh;
+  max-height: 800px;
+  display: inline-block;
+  background: rgba(39, 54, 59, 0.9);
+  color: $color-white;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 2.5rem;
+    color: $color-white;
+  }
+  div {
+    display: none
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+.bannerHomeBottom {
+  width: 100%;
+  height: 70vh;
+  color: $color-blue-darker;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 2.5rem;
+    color: $color-white;
+  }
+  div {
+    display: none
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+.bannerAboutTop {
+  width: 100%;
+  color: $color-blue-darker;
+  background-image: linear-gradient(-20deg,#fc6076 0%,#ff9a44 100%);
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    display: none;
+  }
+  div {
+    display: none
+  }
+  p {
+    font-size: 1.4rem;
+    width: 60%;
+    letter-spacing: 0;
+  }
+}
+.bannerError {
+  width: 100%;
+  color: $color-blue-darker;
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+  h1 {
+    display: none;
+  }
+  div {
+    display: none
+  }
+  p {
+    font-size: 1.4rem;
+    width: 60%;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+  }
+}

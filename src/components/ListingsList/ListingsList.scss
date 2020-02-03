@@ -1,0 +1,87 @@
+@import "../Variables.scss";
+
+.listingsList-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+.listingsList {
+  position: absolute;
+  left: 0;
+  padding-top: 30px;
+  width: 100%;
+  @include respond-to('sm') {
+    width: 50%;
+    max-width: 720px;
+	}
+  &__mapToggle{
+    z-index: 2;
+    position: fixed;
+    top: 80px;
+    right: 37px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: $color-white;
+    background-color: $color-blue-darker;
+    cursor: pointer;
+    transition: 0.3s;
+    visibility: visible;
+    -webkit-box-shadow: 0 0px 3px 2px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0px 3px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0px 3px 2px rgba(0, 0, 0, 0.4);
+    &:hover{
+      transform: scale(1.1);
+      -webkit-box-shadow: 0 0px 5px 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0 0px 5px 2px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0px 5px 2px rgba(0, 0, 0, 0.4);
+    }
+    @include respond-to('sm') {
+      visibility: hidden;
+    }
+  }
+  &__center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    @include respond-to('s') {
+      width: 60vw;
+    }
+    @include respond-to('sm') {
+      width: 45vw;
+    }
+  }
+}
+.listingList-map{
+  visibility: hidden;
+  padding-top: 70px;
+  width: 0vw;
+  position: fixed;
+  left: 50%;
+  @include respond-to('sm') {
+    visibility: visible;
+    width: 50%;
+    max-width: 720px;;
+	}
+}
+.showListList-map{
+  width: 100%;
+  left: 0;
+  visibility: visible;
+}
+.empty-search {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  padding: 1rem;
+  color: $color-blue-darker;
+}
+

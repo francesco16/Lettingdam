@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+
+$color-blue-darker: #27363B;
+$color-blue-darker-faded: rgba(39, 54, 59, 0.1);
+$color-red: #EB4860;
+$color-orange: #FD7466;
+$color-green: #99B998;
+$color-white: #F0F5F9;
+$breakpoints: (
+  s: 576px,
+  sm: 850px,
+	m: 992px,
+  l: 1200px,
+  xl: 1360px
+);
+@mixin respond-to($breakpoint, $breakpoints: $breakpoints) {
+	@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+		@content;
+	}
+}
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+.btn-primary {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 50px;
+  border-radius: 25px;
+  background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+  display: block;
+  text-decoration: none;
+  color: $color-blue-darker;
+  transition: 0.3s;
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-size: 22px;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  }
+}
+.btn-secondary{
+  width: auto;
+  margin: 0 10px;
+}

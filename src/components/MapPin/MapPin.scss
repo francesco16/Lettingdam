@@ -1,0 +1,68 @@
+@import "../Variables.scss";
+
+.mapPin{
+  width: auto;
+  height: auto;
+  transition: 0.3s;
+  position: relative;
+  &:hover  .mapPin_pin{
+    color: $color-red;
+  }
+  &_pin{
+    font-size: 30px;
+    color: $color-green;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+      color: $color-red;
+    }
+  }
+  &_box{
+    z-index: 2;
+    width: 270px;
+    height: 170px;
+    position: absolute;
+    top: -170px;
+    left: -119.5px;
+    border-radius: 5px;
+    overflow: hidden;
+    &_img{
+      width: 270px;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+      &:hover + .mapPin_box_name{
+        opacity: 1;
+      }
+    }
+    &_name{
+      position: absolute;
+      padding: 0 10px;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      opacity: 0.7;
+      transition: 0.3s;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    &_price{
+      padding: 0 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+.mapPinHovered{
+  .mapPin_pin{
+    font-size: 30px;
+    color: $color-red;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
+  }
+}

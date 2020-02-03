@@ -1,0 +1,32 @@
+@import "./components/Variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+a{
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  height: auto;
+  padding-top: 70px;
+  color: var(--mainBlack);
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+

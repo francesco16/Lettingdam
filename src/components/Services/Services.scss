@@ -1,0 +1,39 @@
+@import "../Variables.scss";
+
+.services {
+  text-align: center;
+  padding: 50px 0;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  max-width: 1440px;
+  &_center {
+    width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+    @include respond-to('m') {
+      width: 85%;
+    }
+    &_service{
+      span {
+        display: inline-block;
+        color: $color-orange;
+        font-size: 2.5rem;
+      }
+      h6 {
+        text-transform: capitalize;
+        font-size: 25px;
+        color: $color-blue-darker;
+      }
+      p {
+        width: 80%;
+        margin: -30px auto 0 auto;
+        @include respond-to('l') {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

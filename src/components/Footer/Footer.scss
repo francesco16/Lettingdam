@@ -1,0 +1,39 @@
+@import "../Variables.scss";
+
+.footer{
+  height: auto;
+  width: 100%;
+  max-width: 1440px;
+  background-color: $color-blue-darker;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 20px 0;
+  .footer-social{
+    font-size: 45px;
+    color: $color-white;
+    width: 40%;
+    height: auto;
+    padding: 0 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-address{
+    text-align: center;
+    color: $color-white;
+    h4{
+      margin: 0px 0 0 0;
+    }
+  }
+}
+.footer-clear{
+  background-color: white;
+  padding: 50px 0;
+  .footer-social{
+    color: $color-blue-darker;
+  }
+  .footer-address{
+    color: $color-blue-darker;
+  }
+}

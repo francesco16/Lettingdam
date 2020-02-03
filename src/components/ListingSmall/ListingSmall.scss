@@ -1,0 +1,110 @@
+@import "../Variables.scss";
+
+.listingSmall {
+  max-width: 720px;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0 30px 0;
+  text-decoration: none;
+	@include respond-to('l') {
+    flex-direction: row;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	}
+  &:hover .listingSmall_imgContainer{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    .listingSmall_imgContainer_img{
+      transform: scale(1.2);
+    }
+  }
+  &:hover .listingSmall_info{
+    color: rgba(0,0,0,1);
+    .listingSmall_info_name{
+      text-decoration: underline;
+    }
+    .listingSmall_info_price{
+      border-color: $color-blue-darker;
+    }
+  }
+  &_imgContainer {
+    width: 80vw;
+    max-width: 400px;
+    height: 50vw;
+    max-height: 236px;
+    position: relative;
+    display: flex;
+    transition: 0.3s;
+    border-radius: 5px;
+    overflow: hidden;
+    @include respond-to('sm') {
+      width: 35vw;
+      height: 23.5vw;
+    }
+    @include respond-to('l') {
+      width: 23vw;
+      height: 15.5vw;
+    }
+    &_img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: 0.3s;
+      border-radius: 5px;
+      transform: scale(1.05);
+    }
+  }
+  &_info{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Montserrat', sans-serif;
+    @include respond-to('l') {
+      width: 320px;
+      padding-left: 20px;
+    }
+    &_name{
+      text-transform: capitalize;
+      padding: 0.5rem 5px;
+      text-align: left;
+      font-weight: 400;
+      font-size: 18px;
+      font-weight: bold;
+      @include respond-to('l') {
+        font-size: 15px;
+      }
+    }
+    &_price{
+      margin-top: -15px;
+      text-transform: capitalize;
+      padding: 0.5rem 5px;
+      text-align: left;
+      font-weight: 400;
+      font-size: 15px;
+      border-bottom: 1px solid $color-blue-darker-faded;
+      transition: 0.2s;
+      @include respond-to('l') {
+        border-bottom: none;
+      }
+    }
+    &_rooms{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      text-transform: capitalize;
+      font-weight: 700;
+      padding: 0.5rem 5px;
+      text-align: left;
+      font-weight: 400;
+      font-size: 15px;
+      @include respond-to('l') {
+        position: relative;
+      }
+    }
+  }
+}
+
+

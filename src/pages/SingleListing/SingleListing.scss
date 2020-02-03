@@ -1,0 +1,108 @@
+@import "../../components/Variables.scss";
+
+.singleListing{
+  width: 100%;
+  @include respond-to('m') {
+    height: auto;
+  }
+  &_header{
+    padding: 30px 15vw 10px 15vw;
+    height: auto;
+    width: 100%;
+    @include respond-to('m') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &_name{
+      font-family: 'Roboto', sans-serif;
+      font-size: 30px;
+      @include respond-to('m') {
+        width: 60%;
+        max-width: 1440px;
+      }
+    }
+    &_price{
+      margin-top: -20px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      @include respond-to('m') {
+        width: 60%;
+        max-width: 1440px;
+        margin-top: -20px;
+      }
+    }
+  }
+  &_img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    &_secWrapper{
+      position: relative;
+      width: 100vw;
+      height: 300px;
+      overflow: hidden;
+      @include respond-to('m') {
+        width: 100vw;
+        max-width: 1440px;
+        height: 600px;
+      }
+    }
+  }
+}
+.single-listing-info {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 2rem auto;
+  @include respond-to('m') {
+    width: 60%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.desc{
+  margin: 1rem 0;
+  @include respond-to('m') {
+    width: 600px;
+  }
+  h3 {
+    text-transform: capitalize;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
+.info{
+  margin: 1rem 0;
+  @include respond-to('m') {
+    padding-left: 3rem;
+    width: 250px;
+  }
+  h3, h6 {
+    text-transform: capitalize;
+  }
+  h6 {
+    font-weight: 300;
+  }
+}
+.mapContainer{
+  width: 100vw;
+  height: 50vh;
+  @include respond-to('sm') {
+    width: 60%;
+  }
+}
+.mapSection{
+  padding: 0px 0px 50px 0px;
+  @include respond-to('m') {
+    padding: 50px 0px;
+  }
+}
+  
+  
+  

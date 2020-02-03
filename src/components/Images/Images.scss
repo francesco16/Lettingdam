@@ -1,0 +1,18 @@
+@import "../Variables.scss";
+
+.backIcon{
+  position: fixed;
+  top: 30px;
+  left: 40px;
+  color: $color-white;
+  cursor: pointer;
+  z-index: 6;
+  font-size: 30px;
+  margin-right: 10px;
+}
+button{
+  margin: 0px 5vw;
+  @include respond-to('l') {
+    margin: 0px 10vw;
+  }
+}

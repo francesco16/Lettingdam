@@ -1,0 +1,14 @@
+@import "../Variables.scss";
+
+.mapPinStatic{
+  width: auto;
+  height: auto;
+  transition: 0.3s;
+  position: relative;
+  &_pin{
+    font-size: 40px;
+    color: $color-red;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.3));
+  }
+}
+

@@ -1,0 +1,207 @@
+@import "../Variables.scss";
+
+.filter-container {
+  font-family: 'Montserrat', sans-serif;
+  height: 70px;
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  flex-direction: row;
+  top: 70px;
+  padding-bottom: 0px;
+  background-color: white;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+  @include respond-to('m') {
+    justify-content: center;
+  }
+}
+.filter-form {
+  background-color: white;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 50px;
+  @include respond-to('sm') {
+    position: relative;
+    top: 0px;
+    width: 1075;
+    height: auto;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 40px;
+  }
+  @include respond-to('m') {
+    padding: 30px 50px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+.show-filters {
+  position: absolute;
+  height: calc(100vh - 140px);
+  overflow: scroll;
+}
+.show-filters-container{
+  overflow: visible;
+}
+.form-group {
+  text-transform: capitalize;
+  text-align: center;
+  @include respond-to('sm') {
+    text-align: left;
+  }
+}
+.form-group label {
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.form-control {
+  width: 80%;
+  background: transparent;
+  font-size: 1rem;
+  padding: 5px 0;
+}
+.size-inputs {
+  display: flex;
+}
+.size-input {
+  width: 40%;
+  padding: 0.2rem;
+  border: 2px solid black;
+  border-radius: 0.3rem;
+  margin-right: 0.3rem;
+  @include respond-to('m') {
+    border: 1px solid $color-blue-darker;
+  }
+}
+.single-extra label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.filterBtn{
+  margin-left: 60px;
+  position: fixed;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+  &:hover{
+    opacity: 1;
+  }
+  @include respond-to('sm') {
+    visibility: hidden;
+  }
+  &_icon{
+    margin-left: 5px;
+    margin-bottom: -4px;
+    font-size: 20px;
+    color: $color-blue-darker;
+    visibility: visible;
+    @include respond-to('sm') {
+      visibility: hidden;
+    }
+  }
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 80%;
+  margin: 6.85px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 9.3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #103146;
+  border-radius: 25px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0.2px 0.2px 1.2px #000000, 0px 0px 0.2px #0d0d0d;
+  border: 1px solid #000000;
+  height: 23px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7.05px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #103146;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 9.3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #3071a9;
+  border-radius: 25px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0.2px 0.2px 1.2px #000000, 0px 0px 0.2px #0d0d0d;
+  border: 1px solid #000000;
+  height: 23px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 9.3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #103146;
+  border: 0.2px solid #010101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #103146;
+  border: 0.2px solid #010101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0.2px 0.2px 1.2px #000000, 0px 0px 0.2px #0d0d0d;
+  border: 1px solid #000000;
+  height: 23px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 9.3px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #103146;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #103146;
+}
